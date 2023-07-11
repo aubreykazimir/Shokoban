@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sokoban – Webg2</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/levels.js"></script>
+    <script src="./scripts/state.js"></script>
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <link rel="icon" type="image/png" href="./images/box.png" />
+</head>
+
+<body>
+    <header>
+        <h1>Sokoban</h1>
+    </header>
+    <button class="question" onclick="general_help()">?</button>
+    <div id="intro_compteur">
+        <p>Vous avez fait : <span id="compteur"></span> mouvement<span id="pluriel"></span></p>
+    </div>
+    <div>
+        <div id="world"></div>
+        <div class="btn-group">
+            <button id="reset" onclick="initLevel(level)">Recommencer</button>
+            <button id="annul" onclick="annulationMoves()">Annuler un mouvement</button>
+        </div>
+    </div>
+    <div id="modal">
+        <div class="modalContent">
+            <div class="modalHeader">
+                <span class="modalClose" onclick="closeModal()">&times;</span>
+                <h2>Ce site est en construction</h2>
+            </div>
+            <div class="modalBody">
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Derumier, 58131</p>
+    </footer>
+    <div id="finish_level">
+        <div class="title">
+            <h1>Félicitations!</h1>
+        </div>
+        <div class="content">
+            <p>Vous avez réussi à terminer <span id="level">ce niveau.</span></p>
+            <p>pour <span id="game">passer au niveau suivant</span>, appuyez sur la barre espace.</p>
+        </div>
+    </div>
+</body>
+
+</html>

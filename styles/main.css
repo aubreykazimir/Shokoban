@@ -1,0 +1,207 @@
+body {
+    color: red;
+    font-family: "Courier New", monospace;
+}
+
+footer {
+    color: chocolate;
+    font-family: "Garamond", serif;
+
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    background-image: url("../images/ground.png");
+}
+
+.box {
+    background-color: #32a852;
+    background-image: url("../images/box.png");
+}
+
+.target {
+    background-color: #a04034;
+    background-image: url("../images/target.png");
+}
+
+.target.box.box_won {
+    animation: boxWon 0.75s infinite 0.75s;
+}
+
+.player {
+    background-color: #a103fc;
+    background-image: url("../images/player-front.png");
+    z-index: 10;
+}
+
+.player-front {
+    animation: frontChangeBg 0.75s;
+    background-color: #a103fc;
+    background-image: url("../images/player-front.png");
+}
+
+.player-top {
+    animation: upChangeBg 0.75s;
+    background-color: #a103fc;
+    background-image: url("../images/player-up.png");
+}
+
+.player-left {
+    animation: leftChangeBg 0.75s;
+    background-color: #a103fc;
+    background-image: url("../images/player-left.png");
+}
+
+.player-right {
+    animation: rightChangeBg 0.75s;
+    background-color: #a103fc;
+    background-image: url("../images/player-right.png");
+}
+
+.player-won {
+    background-color: #a103fc;
+    background-image: url("../images/player-won.png");
+}
+
+@keyframes frontChangeBg {
+    0% {
+        background-image: url("../images/player-front.png");
+    }
+
+    100% {
+        background-image: url("../images/player-front2.png");
+    }
+}
+
+@keyframes leftChangeBg {
+    0% {
+        background-image: url("../images/player-left.png");
+    }
+
+    100% {
+        background-image: url("../images/player-left2.png");
+    }
+}
+
+@keyframes rightChangeBg {
+    0% {
+        background-image: url("../images/player-right.png");
+    }
+
+    100% {
+        background-image: url("../images/player-right2.png");
+    }
+}
+
+@keyframes upChangeBg {
+    0% {
+        background-image: url("../images/player-up.png");
+    }
+
+    100% {
+        background-image: url("../images/player-up2.png");
+    }
+}
+
+@keyframes boxWon {
+    0% {
+        background-image: url("../images/box-on-target.png");
+    }
+
+    50% {
+        background-image: url("../images/box.png");
+    }
+
+    100% {
+        background-image: url("../images/box-on-target.png");
+    }
+
+}
+
+
+.target.box {
+    background-color: #D2AC86;
+    background-image: url("../images/box-on-target.png");
+}
+
+.wall {
+    background-color: #4287f5;
+    background-image: url("../images/wall.png");
+}
+
+.row {
+    flex-direction: row;
+    margin: 0px;
+}
+
+#world {
+    display: flex;
+    flex-direction: row;
+}
+
+#finish_level {
+    border: solid black;
+    border-radius: 20px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    background-color: white;
+}
+
+#finish_level div {
+    padding-left: 2%;
+}
+
+#finish_level .title {
+    border-bottom: solid 1px black;
+    background-color: red;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+
+#finish_level h1 {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+}
+
+button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    padding: 1%;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+}
+
+button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.btn-group {
+    margin-top: 2%;
+}
