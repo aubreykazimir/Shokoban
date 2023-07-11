@@ -5,4 +5,4 @@ Pour y jouer, ouvrez le fichier `index.html` dans votre navigateur préféré.
 
 ## Auteur
 
-Ce jeu vous est proposé par 'Damla DERUMIER'.
+Ce jeu vous est proposé par 'Dam DERUMIER'.
